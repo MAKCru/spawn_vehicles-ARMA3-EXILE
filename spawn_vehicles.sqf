@@ -6,7 +6,7 @@ diag_log ["ExileServer - Spawning persistent vehicle spawns"];
 private ["_count","_uid","_debugForSP","_vehicle","_vehicleArray","_count","_vehicleClass","_position","_positionCount","_pinCode","_vehicleObject","_nearVehicles","_nearVechicleCount","_marker","_cancelSpawn","_isRandomRoadPos","_road","_scriptComplete"];
 
 _scriptComplete = false;
-_debugForSP = false;  // Если установлено значение true, при запуске скрипта в редакторе будут создаваться маркеры на местах появления транспортных средств.
+_debugForSP = true;  // Если установлено значение true, при запуске скрипта в редакторе будут создаваться маркеры на местах появления транспортных средств.
 
 _uid = "1234"; //Должен быть действительный UID, который существует в таблице учетных записей (лучше всего использовать UID владельца сервера).
 
@@ -133,9 +133,9 @@ _vehicleArray =
 						} forEach _wheels;
 					};
 
-					_marker = createMarker [format["HeliCrash%1", diag_tickTime], _position];
-					_marker setMarkerType "mil_dot";
-					_marker setMarkerText "Vehicle";
+					//_marker = createMarker [format["HeliCrash%1", diag_tickTime], _position];
+					//_marker setMarkerType "mil_dot";
+					//_marker setMarkerText "Vehicle";
 				};
 			}
 			else
